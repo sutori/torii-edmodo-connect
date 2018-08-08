@@ -1,12 +1,13 @@
 torii-edmodo-connect
 ==============================================================================
 
-[Short description of the addon.]
+This is an [Edmodo Connect](https://www.edmodo.com/home) provider for [Torii](https://github.com/Vestorly/torii).
 
 Installation
 ------------------------------------------------------------------------------
 
 ```
+ember install torii
 ember install torii-edmodo-connect
 ```
 
@@ -14,7 +15,33 @@ ember install torii-edmodo-connect
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+Edit `/config/environment.js` and add your Torii provider configuration:
+
+```javascript
+module.exports = function(environment) {
+  // ...
+
+  ENV['torii'] = {
+    providers: {
+      'edmodo-connect': {
+        apiKey: 'Edmodo API key',
+        redirectUri: 'http://localhost:4200/torii/redirect.html',
+        scope: 'permission scopes (default: "basic")'
+      }
+    }
+  };
+
+  // ...
+};
+```
+
+Options that can be configured:
+
+| Option | Required | Description |
+|--------|----------|-------------|
+| apiKey | x | Client ID of your app |
+| redirectUri | x | Redirect URI of the app for the authentication response |
+| scope | | Permission scopes |
 
 
 Contributing
