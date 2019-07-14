@@ -7,7 +7,11 @@
   ],
   "repository": "",
   "license": "MIT",
-  "author": "",
+  "author": {
+    "name": "Yoran Brondsema",
+    "email": "yoran@sutori.com",
+    "url": "https://www.sutori.com"
+  },
   "directories": {
     "doc": "doc",
     "test": "tests"
